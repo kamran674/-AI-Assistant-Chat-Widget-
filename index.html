@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <title>Get a Quote · AI Chat Widget</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Separate CSS file -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- ===== DEMO PAGE LAYOUT (separate from widget) ===== -->
+    <div class="demo-wrapper">
+        <!-- Left card -->
+        <div class="demo-card">
+            <h2><i class="fas fa-comment-dots"></i> Live preview</h2>
+            <p>Click the chat bubble to open the assistant.</p>
+            <div style="margin-top: 0.6rem; font-size:0.9rem; color:#64748b;">
+                <i class="fas fa-robot" style="color:#3b82f6;"></i> Mock responses · typing animation
+            </div>
+        </div>
+
+        <!-- Right card with your info -->
+        <div class="demo-card widget-container">
+            <h2><i class="fas fa-user-tie"></i> Assistant info</h2>
+            <div class="info-box">
+                <div class="label"><i class="fas fa-briefcase"></i> Role</div>
+                <div class="value"><i class="fas fa-check-circle"></i> safeX solution intern</div>
+            </div>
+            <div class="info-box" style="border-left-color: #8b5cf6; margin-top: 0.8rem;">
+                <div class="label"><i class="fas fa-user"></i> Developer</div>
+                <div class="value"><i class="fas fa-user-edit"></i> Malik Kamran Ali</div>
+                <div class="sub"><i class="fas fa-code"></i> front-end · AI chat widget</div>
+            </div>
+            <div style="margin-top: 1rem; font-size:0.85rem; color:#94a3b8; border-top:1px solid #e9edf2; padding-top:0.8rem;">
+                <i class="fas fa-robot" style="color:#3b82f6;"></i> Get a Quote · v1.0
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CHAT WIDGET MARKUP ===== -->
+    <div class="chat-widget closed" id="chatWidget">
+        <!-- header -->
+        <div class="widget-header">
+            <div class="title">
+                <i class="fas fa-comment-dots"></i>
+                <div>
+                    <span>Get a Quote</span>
+                    <small>AI assistant · online</small>
+                </div>
+            </div>
+            <button class="close-btn" id="closeWidgetBtn" aria-label="Close chat"><i class="fas fa-times"></i></button>
+        </div>
+
+        <!-- messages -->
+        <div class="messages-area" id="messagesArea">
+            <!-- bot welcome message (static) -->
+            <div class="message bot">
+                <i class="fas fa-robot"></i> Hello! I’m your quote assistant. Ask me about pricing, services, or anything else.
+                <span class="timestamp">just now</span>
+            </div>
+        </div>
+
+        <!-- typing indicator (hidden by default) -->
+        <div class="typing-indicator" id="typingIndicator" style="display: none;">
+            <span></span><span></span><span></span>
+        </div>
+
+        <!-- input -->
+        <div class="input-area">
+            <input type="text" id="chatInput" placeholder="Ask for a quote..." autocomplete="off">
+            <button id="sendBtn" aria-label="Send message"><i class="fas fa-arrow-up"></i></button>
+        </div>
+    </div>
+
+    <!-- floating toggle button (open) -->
+    <button class="widget-toggle" id="widgetToggle" aria-label="Open chat"><i class="fas fa-comment-dots"></i></button>
+
+
+    <script src="script.js"></script>
+    <script src="https://your-domain.com/widget.js"></script>
+</body>
+</html>
